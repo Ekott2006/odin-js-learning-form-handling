@@ -80,7 +80,9 @@ exports.usersDeletePost = asyncHandler(async (req, res) => {
   res.redirect("/");
 });
 
-exports.usersSearchGet = asyncHandler(async (req, res) => {
-  const users = usersStorage.search(req.query);
-  res.render("search.ejs", { users });
-});
+exports.usersSearchGet = [
+  asyncHandler(async (req, res) => {
+    const users = usersStorage.search(req.query);
+    res.render("search", { users });
+  }),
+];
