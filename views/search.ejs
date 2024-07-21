@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Search Page</h1>
+    <%- include("partials/search-form.ejs") %>
+    <a href="/">Go to Home</a>
+    <ul>
+      <% users.forEach(function(user) { %>
+      <li>
+        ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %>
+        Email: <%= user.email %>, Age: <%= user.age %>, Bio: <%= user.bio %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

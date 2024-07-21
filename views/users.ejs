@@ -1,0 +1,15 @@
+<!-- views/users.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("partials/errors.ejs") %>
+    <h1><%= title %></h1>
+    
+    <%- include("partials/form.ejs", {action: "/users/create", user: null}) %>
+    
+    <a href="/">Back to home</a>
+  </body>
+</html>

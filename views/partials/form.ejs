@@ -1,0 +1,14 @@
+<form action=<%= action %> method="POST">
+  <label>
+    First Name:
+    <input type="text" name="firstName" required value="<%= user?.firstName%>" >
+  </label>
+  <label>
+    Last Name:
+    <input type="text" name="lastName" required value="<%= user?.lastName%>"  >
+  </label>
+  <label> Email: <input type="email" name="email" required value="<%= user?.email%>" > </label>
+  <label> Age: <input type="number" name="age" min="18" max="120" value="<%= user?.age %>"  > </label>
+  <label> Bio: <input type="text" max="200" value="<%= user?.bio%>" /> </label>
+  <button type="submit">Submit</button>
+</form>
